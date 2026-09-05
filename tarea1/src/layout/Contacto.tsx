@@ -19,7 +19,7 @@ function Contacto() {
   return (
     <section id="contacto">
       <p className="eyebrow">Contacto</p>
-      <h2>Hablemos de tu próximo proyecto</h2>
+      <h2>Contáctame para platicar o trabajar juntos</h2>
 
       {enviado && (
         <p className="confirmation" role="status">

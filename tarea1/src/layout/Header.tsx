@@ -3,7 +3,7 @@ function Header() {
     <header className="hero" id="inicio">
       <p className="eyebrow">Currículum en línea</p>
       <h1>Fabián Gaxiola</h1>
-      <p>Desarrollador web enfocado en React, TypeScript y experiencias digitales.</p>
+      <p>Ingeniero en Desarrollador de Software en Intel · Estudiante de Iteso</p>
       <a className="button" href="#contacto">
         Contactarme
       </a>
@@ -11,4 +11,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Header;

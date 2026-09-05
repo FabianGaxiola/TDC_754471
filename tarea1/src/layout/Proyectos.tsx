@@ -8,28 +8,29 @@ function Proyectos() {
         <article className="card">
           <h3>Portafolio personal</h3>
           <p>
-            Sitio web desarrollado con React y TypeScript para mostrar
+            CV desarrollado con React y TypeScript para mostrar
             experiencia, habilidades y proyectos.
           </p>
           <span>React · TypeScript · CSS</span>
         </article>
 
         <article className="card">
-          <h3>Aplicación de tareas</h3>
+          <h3>Videojuego tipo Galaga</h3>
           <p>
-            Aplicación para organizar actividades, prioridades y estados de
-            trabajo.
+            Proyecto desarrollado en Java para clase de POO
+            inspirado en el videojuego Galaga.
           </p>
-          <span>React · JavaScript · Vite</span>
+          <span>Java</span>
         </article>
 
         <article className="card">
-          <h3>Catálogo digital</h3>
+          <h3>Landing Page para equipo en Intel</h3>
           <p>
-            Interfaz responsive para consultar productos y presentar
-            información de manera clara.
+            Landing page desarrollada para distribuir aplicaciones
+            y dar soporte a los ingenieros de manufactura en el area
+            de Data Center en Intel.
           </p>
-          <span>HTML · CSS · TypeScript</span>
+          <span>PHP · CSS · JavaScript</span>
         </article>
       </div>
     </section>

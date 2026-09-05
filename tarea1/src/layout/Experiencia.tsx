@@ -5,7 +5,6 @@ function Experiencia() {
       <h2>Herramientas que utilizo</h2>
 
       <div className="skills">
-        <span>HTML5</span>
         <span>CSS3</span>
         <span>JavaScript</span>
         <span>TypeScript</span>
@@ -13,6 +12,12 @@ function Experiencia() {
         <span>Vite</span>
         <span>Git</span>
         <span>GitHub</span>
+        <span>Laravel</span>
+        <span>Vue</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>PHP</span>
+        <span>C#</span>
       </div>
     </section>
   )

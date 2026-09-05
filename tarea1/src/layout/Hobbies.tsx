@@ -19,6 +19,21 @@ function Hobbies() {
           <h3>Aprendizaje</h3>
           <p>Investigar tecnologías y mejorar continuamente mis habilidades.</p>
         </article>
+
+        <article className="card">
+          <h3>Videojuegos</h3>
+          <p>Disfruto jugar videojuegos solo y con amigos.</p>
+        </article>
+
+        <article className="card">
+          <h3>Caminar</h3>
+          <p>Encuentro agradable el andar de pata de perro por plazas públicas.</p>
+        </article>
+
+        <article className="card">
+          <h3>Dibujar</h3>
+          <p>Desarrollar y mantener a flote mis habilidades artísticas.</p>
+        </article>
       </div>
     </section>
   )

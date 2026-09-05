@@ -5,7 +5,7 @@ function Educacion() {
       <h2>Formación académica</h2>
 
       <article className="timeline-item">
-        <h3>Ingeniería en sistemas o desarrollo de software</h3>
+        <h3>Ingeniería en desarrollo de software</h3>
         <p>ITESO</p>
         <span>En curso</span>
       </article>

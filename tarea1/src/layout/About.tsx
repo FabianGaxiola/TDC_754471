@@ -4,7 +4,7 @@ function About() {
       <p className="eyebrow">Acerca de mí</p>
       <h2>Construyo soluciones web funcionales y atractivas.</h2>
       <p>
-        Soy estudiante y desarrollador web interesado en crear aplicaciones
+        Soy estudiante y desarrollador interesado en crear aplicaciones
         modernas, accesibles y fáciles de utilizar.
       </p>
     </section>
