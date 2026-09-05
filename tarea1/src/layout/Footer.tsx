@@ -1,9 +1,9 @@
 function Footer() {
-    return (
-        <footer>
-            <p>Fabian Gaxiola</p>
-        </footer>
-    )
+  return (
+    <footer>
+      <p>© 2026 Fabián Gaxiola</p>
+    </footer>
+  )
 }
 
 export default Footer;
