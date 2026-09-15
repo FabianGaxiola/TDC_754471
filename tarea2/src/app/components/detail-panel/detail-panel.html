@@ -1,1 +1,13 @@
-<p>detail-panel works!</p>
+<section>
+  <h2>Detalle</h2>
+
+  @if (selectedTitle) {
+    <p>Título seleccionado: {{ selectedTitle }}</p>
+
+    <button type="button" (click)="clearSelection()">
+      Limpiar
+    </button>
+  } @else {
+    <p>No hay ningún elemento seleccionado.</p>
+  }
+</section>

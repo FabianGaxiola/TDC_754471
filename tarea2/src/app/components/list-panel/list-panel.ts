@@ -1,9 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-list-panel',
-  styleUrl: './list-panel.scss',
   templateUrl: './list-panel.html',
 })
-export class ListPanel {}
+export class ListPanel {
+  @Input() titles: string[] = [];
+  @Input() selectedTitle: string | null = null;
+
+  @Output() titleSelected = new EventEmitter<string>();
+
+  selectTitle(title: string): void {
+    this.titleSelected.emit(title);
+  }
+}

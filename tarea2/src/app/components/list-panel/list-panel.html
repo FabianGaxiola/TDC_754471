@@ -1,1 +1,17 @@
-<p>list-panel works!</p>
+<section>
+  <h2>Lista de títulos</h2>
+
+  <ul>
+    @for (title of titles; track title) {
+      <li>
+        <button
+          type="button"
+          [class.selected]="title === selectedTitle"
+          (click)="selectTitle(title)"
+        >
+          {{ title }}
+        </button>
+      </li>
+    }
+  </ul>
+</section>

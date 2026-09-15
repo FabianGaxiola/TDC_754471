@@ -1,0 +1,29 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+button {
+  margin: 0.4rem 0;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+
+button.selected {
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 650px) {
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}

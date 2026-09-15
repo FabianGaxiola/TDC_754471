@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-detail-panel',
-  styleUrl: './detail-panel.scss',
   templateUrl: './detail-panel.html',
 })
-export class DetailPanel {}
+export class DetailPanel {
+  @Input() selectedTitle: string | null = null;
+
+  @Output() selectionCleared = new EventEmitter<void>();
+
+  clearSelection(): void {
+    this.selectionCleared.emit();
+  }
+}
