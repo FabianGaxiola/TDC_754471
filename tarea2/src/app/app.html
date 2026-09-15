@@ -1,0 +1,16 @@
+<main class="container">
+  <h1>Selector de títulos</h1>
+
+  <section class="panels">
+    <app-list-panel
+      [titles]="titles"
+      [selectedTitle]="selectedTitle()"
+      (titleSelected)="selectTitle($event)"
+    />
+
+    <app-detail-panel
+      [selectedTitle]="selectedTitle()"
+      (selectionCleared)="clearSelection()"
+    />
+  </section>
+</main>
