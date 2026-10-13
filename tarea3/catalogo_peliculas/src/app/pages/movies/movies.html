@@ -1,0 +1,57 @@
+<section class="movies-page">
+  <div class="page-header">
+    <div>
+      <p class="eyebrow">Catálogo</p>
+      <h1>Películas</h1>
+    </div>
+    <span class="results-count">{{ filteredMovies().length }} resultados</span>
+  </div>
+
+  <form class="filters" [formGroup]="filterForm">
+    <div class="field">
+      <label for="query">Buscar</label>
+      <input id="query" type="text" formControlName="query" placeholder="Título o descripción" />
+    </div>
+
+    <div class="field">
+      <label for="director">Director</label>
+      <input id="director" type="text" formControlName="director" placeholder="Director" />
+    </div>
+
+    <div class="field">
+      <label for="producer">Productor</label>
+      <input id="producer" type="text" formControlName="producer" placeholder="Productor" />
+    </div>
+
+    <div class="field">
+      <label for="genre">Género</label>
+      <input id="genre" type="text" formControlName="genre" placeholder="Género" />
+    </div>
+
+    <div class="field field--small">
+      <label for="year">Año</label>
+      <input id="year" type="text" formControlName="year" placeholder="2021" />
+    </div>
+
+    <div class="field field--action">
+      <span class="field__label">Acciones</span>
+      <button type="button" class="clear-filters" (click)="clearFilters()">Limpiar filtros</button>
+    </div>
+  </form>
+
+  <div class="movies-grid" *ngIf="filteredMovies().length; else emptyState">
+    <app-movie-card
+      *ngFor="let movie of filteredMovies()"
+      [movie]="movie"
+      [isFavorite]="favoritesService.isFavorite(movie.id)"
+      (toggleFavorite)="toggleFavorite($event)"
+    ></app-movie-card>
+  </div>
+
+  <ng-template #emptyState>
+    <div class="empty-state">
+      <h2>No se encontraron películas</h2>
+      <p>Prueba con otros filtros o limpia los criterios de búsqueda.</p>
+    </div>
+  </ng-template>
+</section>

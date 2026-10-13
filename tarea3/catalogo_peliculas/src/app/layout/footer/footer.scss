@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1320px;
+  width: min(92vw, 1320px);
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  opacity: 0.9;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
