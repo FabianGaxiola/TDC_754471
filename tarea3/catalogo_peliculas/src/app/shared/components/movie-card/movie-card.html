@@ -1,0 +1,21 @@
+<article class="movie-card">
+  <img [src]="movie.imageUrl" [alt]="movie.title" />
+
+  <div class="movie-card__content">
+    <div class="movie-card__header">
+      <h3><a [routerLink]="['/movies', movie.id]">{{ movie.title }}</a></h3>
+      <span class="movie-card__year">{{ movie.year }}</span>
+    </div>
+
+    <p class="movie-card__meta">{{ movie.genre }} · {{ movie.director }}</p>
+
+    <p class="movie-card__description">{{ movie.description }}</p>
+
+    <div class="movie-card__actions">
+      <a class="movie-card__details" [routerLink]="['/movies', movie.id]">Ver detalle</a>
+      <button type="button" class="favorite-toggle" [class.is-favorite]="isFavorite" (click)="toggleFavorite.emit(movie)">
+        {{ isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos' }}
+      </button>
+    </div>
+  </div>
+</article>

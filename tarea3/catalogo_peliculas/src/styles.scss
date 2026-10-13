@@ -1,0 +1,54 @@
+:root {
+  --bg-900: #070d18;
+  --bg-800: #0b1220;
+  --panel-900: rgba(15, 23, 42, 0.88);
+  --panel-800: rgba(17, 24, 39, 0.92);
+  --panel-700: rgba(30, 41, 59, 0.82);
+  --line: rgba(148, 163, 184, 0.18);
+  --text: #e2e8f0;
+  --muted: #cbd5e1;
+  --soft: #94a3b8;
+  --violet: #8b5cf6;
+  --indigo: #4f46e5;
+  --blue: #60a5fa;
+  --gold: #fbbf24;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(99, 102, 241, 0.28), transparent 26%),
+    radial-gradient(circle at 80% 10%, rgba(139, 92, 246, 0.2), transparent 22%),
+    linear-gradient(180deg, var(--bg-900) 0%, #0d1321 32%, #0f172a 100%);
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+

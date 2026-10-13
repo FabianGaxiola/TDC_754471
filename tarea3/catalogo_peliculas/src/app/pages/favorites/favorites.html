@@ -1,0 +1,26 @@
+<section class="favorites-page">
+  <div class="page-header">
+    <div>
+      <p class="eyebrow">Favoritas</p>
+      <h1>Mis películas favoritas</h1>
+    </div>
+    <span class="results-count">{{ favoriteMovies().length }} favoritos</span>
+  </div>
+
+  <div class="movies-grid" *ngIf="favoriteMovies().length; else emptyState">
+    <app-movie-card
+      *ngFor="let movie of favoriteMovies()"
+      [movie]="movie"
+      [isFavorite]="true"
+      (toggleFavorite)="toggleFavorite($event)"
+    ></app-movie-card>
+  </div>
+
+  <ng-template #emptyState>
+    <div class="empty-state">
+      <h2>Aún no hay favoritas</h2>
+      <p>Agrega películas desde el catálogo para verlas aquí.</p>
+      <a routerLink="/" class="back-link">Ir al catálogo</a>
+    </div>
+  </ng-template>
+</section>

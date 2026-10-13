@@ -1,0 +1,21 @@
+<aside class="sidebar">
+  <div class="sidebar__header">
+    <p class="sidebar__eyebrow">Explorar</p>
+    <h2>Menú</h2>
+  </div>
+
+  <nav class="side-nav" aria-label="Filtrado por secciones">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Películas</a>
+    <a routerLink="/favorites" routerLinkActive="active">
+      Favoritos
+      <span class="badge">{{ favoriteCount() }}</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-card">
+    <p class="sidebar-card__title">Estado</p>
+    <strong>{{ favoriteCount() }} en favoritos</strong>
+    <small>Se mantienen solo en memoria durante la sesión.</small>
+  </div>
+</aside>
+

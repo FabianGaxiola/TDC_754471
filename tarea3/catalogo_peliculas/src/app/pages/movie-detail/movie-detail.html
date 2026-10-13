@@ -1,0 +1,33 @@
+<section class="movie-detail" *ngIf="movie() as selectedMovie; else notFound">
+  <div class="detail-hero">
+    <img [src]="selectedMovie.imageUrl" [alt]="selectedMovie.title" />
+
+    <div class="detail-copy">
+      <p class="eyebrow">{{ selectedMovie.genre }}</p>
+      <h1>{{ selectedMovie.title }}</h1>
+
+      <div class="detail-meta">
+        <span><strong>Director:</strong> {{ selectedMovie.director }}</span>
+        <span><strong>Productor:</strong> {{ selectedMovie.producer }}</span>
+        <span><strong>Año:</strong> {{ selectedMovie.year }}</span>
+      </div>
+
+      <p class="description">{{ selectedMovie.description }}</p>
+
+      <div class="detail-actions">
+        <button type="button" class="favorite-toggle" [class.is-favorite]="isFavorite()" (click)="toggleFavorite()">
+          {{ isFavorite() ? 'Quitar de favoritos' : 'Agregar a favoritos' }}
+        </button>
+        <a class="back-link" routerLink="/">Volver al catálogo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #notFound>
+  <div class="empty-state">
+    <h2>Película no encontrada</h2>
+    <p>La película que buscas no existe o fue eliminada del catálogo.</p>
+    <a routerLink="/" class="back-link">Volver al inicio</a>
+  </div>
+</ng-template>
